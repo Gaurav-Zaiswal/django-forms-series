@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Listing of Blog posts here</h2>
+    {% for post in posts %}
+        <a href="{% url 'detail-post' post.id %}">
+            <div>{{ post.title }}</div>
+        </a>
+    {% endfor %}
+</body>
+</html>
