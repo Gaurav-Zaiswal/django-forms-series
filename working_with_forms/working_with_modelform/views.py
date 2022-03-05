@@ -17,8 +17,10 @@ def create_blog_view(request):
         if form.is_valid():
             form.save()
             return redirect('list-posts')
-        else:
-            raise ValidationError("Invalid form")
+            
+        # comment down below two lines of code, as we are not overriding the validation message here
+        # else:
+        #     raise ValidationError("Invalid form")
     else:
         form = CreateBlogPostModelForm()
     
